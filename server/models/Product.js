@@ -9,7 +9,8 @@ const ProductSchema = new mongoose.Schema(
         size: {type: Array},
         color: {type: Array},
         price: {type: Number , required: true},
-        brand : {type: String , required : true},
+        brand : {type: String , required : true , default: "Generic"},
+        condition: {type: String , required: true , default: "New"},
         Stock:{type:Number , default:0},
         ratings: [
             {
