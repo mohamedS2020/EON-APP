@@ -14,9 +14,9 @@ const OrderSchema = new mongoose.Schema(
                 }
             }
         ],
-        userAddress:{type:String ,required: true},
+        userAddress:{type:Object ,required: true},
         totalAmount: {type:Number ,required: true},
-        orderStatus:{type:String , default:"Pending"}
+        orderStatus:{type:String , default:"In progress"}
     },
     //to save the date ex:(created at: time , updated at: time)
     {timestamps: true}

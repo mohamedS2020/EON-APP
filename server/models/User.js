@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
-const UserSchema = new mongoose.Schema(
+const {Schema} = mongoose;
+
+const UserSchema = new Schema(
   {
-    email: { type: String, required: true },
+    email: { type: String, required: true , unique: true},
     password: { type: String, required: true },
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
@@ -13,12 +15,15 @@ const UserSchema = new mongoose.Schema(
     ],
     role: {
       type: String,
-      enum: ["Student", "Admin"],
+      enum: ["Customer", "Admin"],
+      default: "Customer",
     },
     avatar: { type: String },
   },
   // To save the date ex: (created at: time, updated at: time)
-  { timestamps: true }
+  { 
+    timestamps: true
+  }
 );
 module.exports = mongoose.model("user", UserSchema);
 
