@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const OrderSchema = new mongoose.Schema(
     {
-        userId:{type: String , required:true, unique:true},
+        userId:{type: String , required:true},
         Products:[
             {
                 productId:{
@@ -16,7 +16,7 @@ const OrderSchema = new mongoose.Schema(
         ],
         userAddress:{type:Object ,required: true},
         totalAmount: {type:Number ,required: true},
-        orderStatus:{type:String , default:"In progress"}
+        orderStatus:{type:String , default:"Pending"}
     },
     //to save the date ex:(created at: time , updated at: time)
     {timestamps: true}

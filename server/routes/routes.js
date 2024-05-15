@@ -5,14 +5,13 @@ const productRouter = require("./product");
 const cartRouter = require("./cart");
 const orderRouter = require("./order");
 
+const base ="/api"
 
-const base ="/api/v1"
-
-router.use(`${base}`, userRoutes)
-router.use(`${base}`, authRouter)
-router.use(`${base}`, productRouter)
-router.use(`${base}`, cartRouter)
-router.use(`${base}`, orderRouter)
+router.use(`${base}/users`, userRoutes)
+router.use(`${base}/auth`, authRouter)
+router.use(`${base}/products`, productRouter)
+router.use(`${base}/cart`, cartRouter)
+router.use(`${base}/orders`, orderRouter)
 
 
 module.exports = router; 

@@ -1,4 +1,4 @@
-const Banner = require("../models/banner");
+/* const Banner = require("../models/banner");
 const cloudinary = require('../utils/cloudinary');
 const router = require("./auth");
 
@@ -56,4 +56,4 @@ async (req, res, next)=>{
    
 }
 
-module.exports = router;
+module.exports = router; */
